@@ -9,7 +9,7 @@ class Calculator:
         self.window.title("Calculator")
         self.window.resizable(False, False)
 
-        #Numeros
+        #Numbers
         self.zero = tk.Button(self.window, text="0", width=5, height=2, command=lambda: self.add_number("0"))
         self.zero.grid(column=0, row=4, sticky='nsew')
         self.number1 = tk.Button(self.window, text="1", width=5, height=2, command=lambda: self.add_number("1"))
@@ -31,25 +31,25 @@ class Calculator:
         self.number9 = tk.Button(self.window, text="9", width=5, height=2, command=lambda: self.add_number("9"))
         self.number9.grid(column=2, row=3, sticky='nsew')
 
-        #Operadores
-        self.multiplicar = tk.Button(self.window, text="X", width=5, height=2, command=lambda: self.add_operator("*"))
-        self.multiplicar.grid(column=3, row=1, sticky='nsew')
-        self.dividir = tk.Button(self.window, text="/", width=5, height=2, command=lambda: self.add_operator("/"))
-        self.dividir.grid(column=3, row=2, sticky='nsew')
-        self.sumar = tk.Button(self.window, text="+", width=5, height=2, command=lambda: self.add_operator("+"))
-        self.sumar.grid(column=3, row=3, sticky='nsew')
-        self.restar = tk.Button(self.window, text="-", width=5, height=2, command=lambda: self.add_operator("-"))
-        self.restar.grid(column=3, row=4, sticky='nsew')
-        self.igual = tk.Button(self.window, text="=", width=5, height=2, command=self.calculate)
-        self.igual.grid(column=2, row=4, sticky='nsew')
+        #Operators
+        self.multiply = tk.Button(self.window, text="X", width=5, height=2, command=lambda: self.add_operator("*"))
+        self.multiply.grid(column=3, row=1, sticky='nsew')
+        self.divide = tk.Button(self.window, text="/", width=5, height=2, command=lambda: self.add_operator("/"))
+        self.divide.grid(column=3, row=2, sticky='nsew')
+        self.add = tk.Button(self.window, text="+", width=5, height=2, command=lambda: self.add_operator("+"))
+        self.add.grid(column=3, row=3, sticky='nsew')
+        self.substract = tk.Button(self.window, text="-", width=5, height=2, command=lambda: self.add_operator("-"))
+        self.substract.grid(column=3, row=4, sticky='nsew')
+        self.equals = tk.Button(self.window, text="=", width=5, height=2, command=self.calculate)
+        self.equals.grid(column=2, row=4, sticky='nsew')
 
-        #Borrar
-        self.borrar = tk.Button(self.window, text="CE", width=5, height=2, background='orange', command=self.clear)
-        self.borrar.grid(column=3, row=0, sticky='nsew')
+        #Delete
+        self.erase = tk.Button(self.window, text="CE", width=5, height=2, background='orange', command=self.clear)
+        self.erase.grid(column=3, row=0, sticky='nsew')
 
-        #Punto
-        self.punto = tk.Button(self.window, text=".", width=5, height=2, command=lambda: self.add_number("."))
-        self.punto.grid(column=1, row=4, sticky='nsew')
+        #point
+        self.point = tk.Button(self.window, text=".", width=5, height=2, command=lambda: self.add_number("."))
+        self.point.grid(column=1, row=4, sticky='nsew')
 
         #Display
         self.display = tk.Entry(self.window, width=15, font=("Arial", 20), justify="right")
