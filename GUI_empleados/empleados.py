@@ -11,8 +11,8 @@ class App:
         self.window = tk.Tk()
         self.window.title("Empleados")
 
-        foto= tk.PhotoImage(file= './img/enuevo.png')
-        tk.Label(self.window, image=foto).grid(row=0,column=1, columnspan=2, sticky="WE")
+        # foto= tk.PhotoImage(file= './img/enuevo.png')
+        # tk.Label(self.window, image=foto).grid(row=0,column=1, columnspan=2, sticky="WE")
 
         tk.Label(self.window, text="ID empleados").grid(row=1, column=0, sticky= "W")
         tk.Label(self.window, text="Nombre").grid(row=2, column=0, sticky= "W")
@@ -58,8 +58,6 @@ class App:
         edi.EmpleadoArchivo.agregar(emp)
 
     def borrar(self):
-        # emp= e.cemp(self.id.get(), self.name.get(), self.ln.get(),self.a.get(), self.departamento.get(), self.sueldo.get())
-        # edi.EmpleadoArchivo.borrar(emp)
         idb= simpledialog.askinteger("Busqueda","Escriba el ID a borrar", parent= self.window, minvalue=0, maxvalue=100)
         edi.EmpleadoArchivo.borrar(idb)
 
