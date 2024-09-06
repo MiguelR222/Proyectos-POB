@@ -1,6 +1,7 @@
 import tkinter as tk
 import random
 
+
 class DiceFrame(tk.Frame):
     def __init__(self, master=None, dice_number=1) -> None:
         super().__init__(master)
